@@ -13,6 +13,7 @@ jobs:
       image: convisoappsec/convisocli:1.12.4-rc.0
       env:
         FLOW_API_KEY: ${{secrets.CONVISO_API_KEY}}
+        FLOW_API_URL: 'https://app.convisoappsec.com'
     steps:
     - uses: actions/checkout@v3
   
