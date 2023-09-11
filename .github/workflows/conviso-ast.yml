@@ -1,9 +1,10 @@
 name: CI
 on:
- push:
-   branches: [ main, develop ]
- pull_request:
-   branches: [ main, develop ]
+ workflow_dispatch:
+ #push:
+ #  branches: [ main, develop ]
+ #pull_request:
+ #  branches: [ main, develop ]
 
 jobs:
   conviso-ast:
@@ -11,7 +12,7 @@ jobs:
     container:
       image: convisoappsec/convisocli:1.12.4-rc.0
       env:
-        FLOW_API_KEY:  ${{secrets.CONVISO_API_KEY}}
+        CONVISO_API_KEY:  ${{secrets.CONVISO_API_KEY}}
     steps:
     - uses: actions/checkout@v3
   
