@@ -1,4 +1,4 @@
-name: CI
+name: Conviso Platform AST
 on:
  workflow_dispatch:
  #push:
